@@ -93,15 +93,15 @@ target_link_libraries(ExtQt5ForGUI
 
 if (CMP_HOST_LINUX)
 
-find_library(LIBICUDATA NAMES libicudata.so.56 PATHS ${QT_LIB_DIR}/lib)
+find_library(LIBICUDATA NAMES libicudata.so PATHS ${QT_LIB_DIR}/lib)
 if (LIBICUDATA STREQUAL "LIBICUDATA-NOTFOUND")
     message(FATAL_ERROR "libicudata not found in Qt submodule")
 endif()
-find_library(LIBICUUC NAMES libicuuc.so.56 PATHS ${QT_LIB_DIR}/lib)
+find_library(LIBICUUC NAMES libicuuc.so PATHS ${QT_LIB_DIR}/lib)
 if (LIBICUUC STREQUAL "LIBICUUC-NOTFOUND")
     message(FATAL_ERROR "libicuuc not found in Qt submodule")
 endif()
-find_library(LIBICUI18N NAMES libicui18n.so.56 PATHS ${QT_LIB_DIR}/lib)
+find_library(LIBICUI18N NAMES libicui18n.so PATHS ${QT_LIB_DIR}/lib)
 if (LIBICUI18N STREQUAL "LIBICUI18N-NOTFOUND")
     message(FATAL_ERROR "libicui18n not found in Qt submodule")
 endif()
